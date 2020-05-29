@@ -1,6 +1,7 @@
 FROM alpine:3.11.6@sha256:39eda93d15866957feaee28f8fc5adb545276a64147445c64992ef69804dbf01 as run
 
 # If any dependencies are necessary, install them here.
+RUN apk add --no-cache curl
 
 FROM balenalib/intel-nuc-alpine-golang:1-3.11-20200502 as build
 
