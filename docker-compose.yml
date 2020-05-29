@@ -1,0 +1,13 @@
+version: '2'
+volumes:
+  resin-data:
+services:
+  spike:
+    build: ./spike
+    restart: always
+    # privileged: true
+    labels:
+      io.balena.features.supervisor-api: '1'
+      io.balena.features.balena-api: '1'
+    volumes:
+      - 'resin-data:/data'
