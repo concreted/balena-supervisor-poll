@@ -1,7 +1,10 @@
 #!/bin/bash
 
+env
+
 while :
 do
+
 	echo "Checking supervisor"
 	curl -X GET --header "Content-Type:application/json" \
 	    "$BALENA_SUPERVISOR_ADDRESS/ping?apikey=$BALENA_SUPERVISOR_API_KEY"
